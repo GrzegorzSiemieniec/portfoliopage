@@ -11,11 +11,11 @@ import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
 
 /* import specific icons */
 import { faGithub, faLinkedin, faHtml5, faCss3, faNode, faVuejs, faSquareJs } from '@fortawesome/free-brands-svg-icons'
-import { faAngleUp, faGripLines } from '@fortawesome/free-solid-svg-icons'
+import { faAngleUp, faGripLines, faDatabase } from '@fortawesome/free-solid-svg-icons'
 import ElementPlus from 'element-plus'
 import 'C:/Users/cezik/Desktop/portfolio/portfolio/node_modules/element-plus/theme-chalk/index.css'
 /* add icons to the library */
-library.add(faGithub, faLinkedin, faAngleUp, faGripLines, faHtml5, faCss3, faNode, faVuejs, faSquareJs)
+library.add(faDatabase, faGithub, faLinkedin, faAngleUp, faGripLines, faHtml5, faCss3, faNode, faVuejs, faSquareJs)
 
 createApp(App)
 .use(ElementPlus, AOS, DarkModeSwitch)

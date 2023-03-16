@@ -12,7 +12,7 @@
     <ul id="menu">
       <a @click="scrollToProjects"><li>Projects</li></a>
       <a @click="scrollToContact"><li>Contact</li></a>
-      <a @click="downloadFile"><li>My CV</li></a>
+      <a ><li>My CV</li></a>
     </ul>
     
   </div>
@@ -23,39 +23,14 @@
       <p id="workProjects">I am Grzegorz FrontEnd Developer, <br> thanks to the knowledge of <br> the following technologies I create websites.</p>
     </div>
     <div id="technologies" data-aos="fade-right" data-aos-duration="900">
-      <div class="demo-progress"  id="start">
-
-    <el-progress type="circle" :percentage="percentageHTML" status="success" width="175">
-        <span class="percentage-value"><font-awesome-icon icon="fa-brands fa-html5" /></span>
-        <span>HTML</span>
-        <span class="percentage-label">{{ percentageHTML }}%</span>
-    </el-progress>
-
-    <el-progress type="circle" :percentage="percentageCSS" status="success" width="175">
-        <span class="percentage-value"><font-awesome-icon icon="fa-brands fa-css3" /></span>
-        <span>CSS</span>
-        <span class="percentage-label">{{ percentageCSS }}%</span>
-    </el-progress>
-
-    <el-progress type="circle" :percentage="percentageNode" status="warning" width="175">
-        <span class="percentage-value"><font-awesome-icon icon="fa-brands fa-node" /></span>
-        <span>Node.js</span>
-        <span class="percentage-label">{{ percentageNode }}%</span>
-    </el-progress>
-
-    <el-progress type="circle" :percentage="percentageVue" status="warning" width="175">
-        <span class="percentage-value"><font-awesome-icon icon="fa-brands fa-vuejs" /></span>
-        <span>Vue.js</span>
-        <span class="percentage-label">{{ percentageVue }}%</span>
-    </el-progress>
-
-    <el-progress type="circle" :percentage="percentageJS" status="success" width="175">
-        <span class="percentage-value"><font-awesome-icon icon="fa-brands fa-square-js" /></span>
-        <span>JavaScript</span>
-        <span class="percentage-label">{{ percentageJS }}%</span>
-    </el-progress>
-
-  </div>
+      <div id="container">
+        <button class="btns" id="nodejsb"><font-awesome-icon icon="fa-brands fa-node" id="nodejsi" class="icons2"/></button>
+        <button class="btns" id="html5b"><font-awesome-icon icon="fa-brands fa-html5" id="html5i" class="icons2"/></button>
+        <button class="btns" id="cssb"><font-awesome-icon icon="fa-brands fa-css3" id="cssi" class="icons2"/></button>
+        <button class="btns" id="vuejsb"><font-awesome-icon icon="fa-brands fa-vuejs" id="vuejsi" class="icons2"/></button>
+        <button class="btns" id="mongodbb"><font-awesome-icon icon="fa-solid fa-database" id="mongodbi" class="icons2"/></button>
+        <button class="btns" id="jsb"><font-awesome-icon icon="fa-brands fa-square-js" id="jsi" class="icons2"/></button>
+      </div>
     </div>
     <div id="projects" data-aos="fade-right" data-aos-duration="1500">
       <p id="workProjects">Below are some examples from my projects...</p>
@@ -96,7 +71,7 @@
   <div id="contact" data-aos="fade-up" data-aos-duration="1000">
     <p id="work">Let's start working together.</p>
     <p id="mail">gsiemieniec@gmail.com</p>
-    <button text @click="sendMail" class="btn" id="bc"><p>Contact me</p></button>
+    <a href="mailto:grzegorz021104@gmail.com"><button text @click="sendMail" class="btn" id="bc"><p>Contact me</p></button></a>
 
   </div>
   <div class="footer" id="footer">
@@ -111,8 +86,6 @@
 import AOS from 'aos'
 import 'aos/dist/aos.css'
 /*eslint-disable */
-import '@fortawesome/fontawesome-free/css/all.css';
-import { ElMessage, ElMessageBox } from 'element-plus';
 export default {
   name: 'PortfolioList',
   props: {
@@ -127,12 +100,7 @@ export default {
       hoveringButton2: false,
       hoveringButton3: false,
       hoveringButton4: false,
-      hoveringButton5: false,
-      percentageHTML: 0,
-      percentageCSS: 0,
-      percentageNode: 0,
-      percentageVue: 0,
-      percentageJS: 0,
+      hoveringButton5: false
     };
   },
   created() {
@@ -145,18 +113,6 @@ export default {
     window.removeEventListener('scroll', this.handleScrollHTML);
   },
   methods: {
-    sendMail(){
-      ElMessageBox.prompt('Please input your message to me', 'E-Mail', {
-        confirmButtonText: 'OK',
-        cancelButtonText: 'Cancel',
-        center: true,
-        roundButton: true,
-        confirmButtonText: "Send",
-        customClass: "mesbox"
-      }).then(({ value }) => {
-        
-    })
-    },
     handleScroll() {
       this.showButton = window.scrollY > 0;
     },
@@ -171,60 +127,10 @@ export default {
       const element = document.getElementById('contact');
       element.scrollIntoView({ behavior: "smooth", block: "start", inline: "nearest" });
     },
-    handleScroll() {
-      const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
-      var projects = document.getElementById("projects");
-      var footer = document.getElementById("footer");
-      var technologies = document.getElementById("technologies")
-      const scrollHeight = document.documentElement.scrollHeight - projects.scrollHeight - footer.scrollHeight - (technologies.scrollHeight / 2) - 300;
-      const clientHeight = document.documentElement.clientHeight;
-      const scrollPercent = (scrollTop / (scrollHeight - clientHeight)) * 100;
-      if(scrollPercent > 85){
-        this.percentageHTML = 85;
-      }else{
-      this.percentageHTML = Math.floor(scrollPercent)
-      }
-
-      if(scrollPercent > 90){
-        this.percentageCSS = 90;
-      }else{
-      this.percentageCSS = Math.floor(scrollPercent)
-      }
-
-      if(scrollPercent > 75){
-        this.percentageNode = 75;
-      }else{
-      this.percentageNode = Math.floor(scrollPercent)
-      }
-
-      if(scrollPercent > 70){
-        this.percentageVue = 70;
-      }else{
-      this.percentageVue = Math.floor(scrollPercent)
-      }
-
-      if(scrollPercent > 85){
-        this.percentageJS = 85;
-      }else{
-      this.percentageJS = Math.floor(scrollPercent)
-      }
-    },
-    downloadFile() {
-      const fileUrl = '../assets/logo.png';
-      const link = document.createElement('a');
-      link.href = fileUrl;
-      link.setAttribute('download', 'logo.png');
-      link.click();
-      ElMessage({
-      message: "Downloading CV...",
-      duration: 1050,
-      type: "info"
-      })
-    }
   },
   beforeDestroy() {
     window.removeEventListener("scroll", this.handleScroll2);
-  },
+  }
 }
 /*eslint-disable */
 

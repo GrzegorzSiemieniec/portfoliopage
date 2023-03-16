@@ -222,7 +222,7 @@
 .card{
   border-radius: 20px;
   margin-left: 10px;
-  height: 200px;
+  height:250px;
   background-color: #fff;
   flex: 0.5;
   transition: .3 all ease;
@@ -235,6 +235,7 @@
   transition: all 300ms ease-in-out;
   min-width: 100px;
   margin-right: 5px;
+  font-size: larger;
 }
 
 .card:hover{
@@ -265,9 +266,11 @@
   height: fit-content;
   width: 120px;
   position: absolute;
-  top: 80%;
-  left: 41%;
-  margin: -25px 0 0 -25px;
+  bottom: 10px;
+  left: 0;
+  right: 0;
+  margin: auto;
+  margin-top: 10px
 }
 
 #githubProject:hover{
@@ -320,7 +323,7 @@
 }
 
 .btn{
-  background: linear-gradient(90deg, #fa7199, #f5ce62, #e43603, #fa7199);
+  background: linear-gradient(90deg, #703245, #7e5f0a, #701e05, #783348);
   background-size: 200%;
 }
 
@@ -412,4 +415,259 @@ input:checked + .slider:before {
 
 .slider.round:before {
   border-radius: 50%;
+}
+
+#container {
+  display: inline;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100vh;
+  padding: 20px;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+
+.btns {
+  position: relative;
+  width: 120px;
+  height: 120px;
+  overflow: hidden;
+  border: none;
+  border-radius: 75px;
+  background-color: rgba(25,25,25,255);
+  color: #fff;
+  font-size: 1.2rem;
+  letter-spacing: 2px;
+  outline: none;
+  cursor: pointer;
+  margin-right: 35px;
+}
+
+.btns:hover{
+  width: 250px;
+  transition: all .389s;
+  background-color: rgb(30,30,30);
+}
+#nodejsb::before {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  transition: all .5s;
+}
+#nodejsb::after {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 100px;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  content: 'Node.js\a + Discord.js';
+  white-space: pre;
+  font-weight: 900;
+  transition: all .5s;
+}
+
+#nodejsb:hover::before {
+  top: -250px;
+}
+#nodejsb:hover::after {
+  top: 0;
+}
+
+#html5b::before {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  transition: all .5s;
+}
+#html5b::after {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 100px;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  content: 'HTML5';
+  font-weight: 900;
+  transition: all .5s;
+}
+
+#html5b:hover::before {
+  top: -250px;
+}
+#html5b:hover::after {
+  top: 0;
+}
+#jsb:hover::before {
+  top: -250px;
+}
+#jsb:hover::after {
+  top: 0;
+}
+
+#jsb::before {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  transition: all .5s;
+}
+#jsb::after {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 100px;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  content: 'JavaScript';
+  font-weight: 900;
+  transition: all .5s;
+}
+
+#mongodbb:hover::before {
+  top: -250px;
+}
+#mongodbb:hover::after {
+  top: 0;
+}
+
+#mongodbb::before {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  transition: all .5s;
+}
+#mongodbb::after {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 100px;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  content: 'MongoDB\a+ SQL';
+  white-space: pre;
+  font-weight: 900;
+  transition: all .5s;
+}
+
+#vuejsb:hover::before {
+  top: -250px;
+}
+#vuejsb:hover::after {
+  top: 0;
+}
+
+#vuejsb::before {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  transition: all .5s;
+}
+#vuejsb::after {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 100px;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  content: 'Vue.js';
+  font-weight: 900;
+  transition: all .5s;
+}
+
+#cssb:hover::before {
+  top: -250px;
+}
+#cssb:hover::after {
+  top: 0;
+}
+
+#cssb::before {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  transition: all .5s;
+}
+#cssb::after {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 100px;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  content: 'CSS';
+  font-weight: 900;
+  transition: all .5s;
+}
+
+#nodejsb:hover #nodejsi{
+  display: none;
+}
+#vuejsb:hover #vuejsi{
+  display: none;
+}
+#jsb:hover #jsi{
+  display: none;
+}
+#cssb:hover #cssi{
+  display: none;
+}
+#html5b:hover #html5i{
+  display: none;
+}
+#mongodbb:hover #mongodbi{
+  display: none;
+}
+.icons2{
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  top: 0;
+  margin: auto;
+  width: 50px;
+  height: 50px;
 }
