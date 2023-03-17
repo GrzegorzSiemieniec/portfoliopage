@@ -8,7 +8,7 @@ import DarkModeSwitch from 'vue-dark-mode-switch'
 import { library } from '@fortawesome/fontawesome-svg-core'
 /* import font awesome icon component */
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
-
+import { VueResponsiveness } from 'vue-responsiveness'
 /* import specific icons */
 import { faGithub, faLinkedin, faHtml5, faCss3, faNode, faVuejs, faSquareJs } from '@fortawesome/free-brands-svg-icons'
 import { faAngleUp, faGripLines, faDatabase } from '@fortawesome/free-solid-svg-icons'
@@ -18,6 +18,6 @@ import 'C:/Users/cezik/Desktop/portfolio/portfolio/node_modules/element-plus/the
 library.add(faDatabase, faGithub, faLinkedin, faAngleUp, faGripLines, faHtml5, faCss3, faNode, faVuejs, faSquareJs)
 
 createApp(App)
-.use(ElementPlus, AOS, DarkModeSwitch)
+.use(ElementPlus, AOS, DarkModeSwitch, VueResponsiveness)
 .component('font-awesome-icon', FontAwesomeIcon)
 .mount('#app')

@@ -1,4 +1,4 @@
-<template>
+<template v-if="$matches.sm.min">
   <div id="all" ref="container">
   <!-- This is now the root element  -->
   <nav role="navigation">
@@ -34,7 +34,7 @@
     </div>
     <div id="projects" data-aos="fade-right" data-aos-duration="1500">
       <p id="workProjects">Below are some examples from my projects...</p>
-      <div id="containerCards">
+      <div id="containerCards1">
         <div class="card" data-aos="flip-left" data-aos-duration="1000">
           <p id="projectTitle">Discord.js Bot</p>
           <hr> 
@@ -53,6 +53,8 @@
           <p id="projectDescription"></p>
           <a href="https://github.com/GrzegorzSiemieniec/bot" target="_blank"><button id="githubProject"><p id="in"><font-awesome-icon icon="fa-brands fa-github" class="iconsProjects"/> Github</p></button></a>
         </div>
+      </div>
+        <div id="containerCards2">
         <div class="card" data-aos="flip-left" data-aos-duration="1000">
           <p id="projectTitle">Lorem Ipsum</p>
           <hr> 
