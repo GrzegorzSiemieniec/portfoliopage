@@ -539,7 +539,7 @@ input:checked + .slider:before {
 
   .card{
     border-radius: 20px;
-    height:230px;
+    height:260px;
     width: 200px;
     padding-left: 30px;
     padding-right: 30px;
@@ -550,6 +550,7 @@ input:checked + .slider:before {
     margin-right: 25px;
     transition: all 300ms ease-in-out;
     font-size: 14px;
+    margin: auto;
   }
   
   .card:hover{
@@ -564,11 +565,12 @@ input:checked + .slider:before {
     left: 30px;
     right: 30px;
     margin: auto;
-    font-size: 12.5px;
+    font-size: 18px;
   }
   
   #projectTitle{
-    font-size: 13px;
+    padding-top: 20px;
+    font-size: 20px;
     font-style: italic;
   
   }
@@ -579,7 +581,7 @@ input:checked + .slider:before {
     background: rgba(42,42,42,255);
     border-radius: 20px;
     height: fit-content;
-    width: 100px;
+    width: fit-content;
     position: absolute;
     bottom: 10px;
     left: 0;
@@ -605,11 +607,20 @@ input:checked + .slider:before {
   .iconsProjects{
     display: flex;
     color: white-space;
-    height: 13px;
-    width: 13px;
+    height: 20px;
+    width: 20px;
     color: whitesmoke;
     padding-left: 7px;
     margin-right: 7px;
+  }
+
+  #containerCards1{
+    display: inline-block;
+    width: 100%;
+  }
+  #containerCards2{
+    display: inline-block;
+    width: 100%;
   }
 
 }
@@ -689,6 +700,7 @@ input:checked + .slider:before {
     margin-right: 25px;
     transition: all 300ms ease-in-out;
     font-size: 14px;
+    margin: auto;
   }
   
   .card:hover{
@@ -703,11 +715,12 @@ input:checked + .slider:before {
     left: 30px;
     right: 30px;
     margin: auto;
-    font-size: 9.5px;
+    font-size: 18px;
   }
   
   #projectTitle{
-    font-size: 10px;
+    padding-top: 20px;
+    font-size: 20px;
     font-style: italic;
   
   }
@@ -744,11 +757,20 @@ input:checked + .slider:before {
   .iconsProjects{
     display: flex;
     color: white-space;
-    height: 10px;
-    width: 10px;
+    height: 20px;
+    width: 20px;
     color: whitesmoke;
     padding-left: 7px;
     margin-right: 7px;
+  }
+
+  #containerCards1{
+    display: inline-block;
+    width: 100%;
+  }
+  #containerCards2{
+    display: inline-block;
+    width: 100%;
   }
 
 }
