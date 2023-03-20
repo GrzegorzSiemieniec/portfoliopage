@@ -455,6 +455,7 @@ input:checked + .slider:before {
   outline: none;
   cursor: pointer;
   margin-right: 35px;
+  transition: all .509s;
 }
 
 .btns:hover{
@@ -471,6 +472,7 @@ input:checked + .slider:before {
   }
 
   .btns {
+    transition: all .509s;
     position: relative;
     width: 120px;
     height: 120px;
@@ -640,6 +642,7 @@ input:checked + .slider:before {
   }
 
   .btns {
+    transition: all .509s;
     position: relative;
     width: 100px;
     height: 100px;
@@ -653,16 +656,16 @@ input:checked + .slider:before {
     outline: none;
     cursor: pointer;
     margin-right: 35px;
-    margin-bottom: 35px;
+    margin-left: 25px;
+    margin-bottom: 25px;
   }
   #container {
     display: inline-block;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    width: 350px;
+    width: fit-content;
     height: 20vh;
-    padding: 20px;
   }
 
   #nav, #aboutme, #contact, #technologies, #projects{
