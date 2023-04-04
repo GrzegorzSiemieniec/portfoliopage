@@ -72,7 +72,7 @@
   </div>
   <div id="contact" data-aos="fade-up" data-aos-duration="1000">
     <p id="work">Let's start working together.</p>
-    <p id="mail">gsiemieniec@gmail.com</p>
+    <p id="mail">grzegorz021104@gmail.com</p>
     <a href="mailto:grzegorz021104@gmail.com"><button text @click="sendMail" class="btn" id="bc"><p>Contact me</p></button></a>
 
   </div>
